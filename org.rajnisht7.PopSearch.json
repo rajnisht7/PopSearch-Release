@@ -1,0 +1,40 @@
+{
+    "app-id": "org.rajnisht7.PopSearch",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "44",
+    "sdk": "org.gnome.Sdk",
+    "command": "/app/launch_search_bar.sh",
+    "finish-args": [
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=home"
+    ],
+    "modules": [
+        {
+            "name": "PopSearch",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 PopSearch-0.1/search_bar.py /app/search_bar.py",
+                "install -Dm755 PopSearch-0.1/launch_search_bar.sh /app/launch_search_bar.sh",
+                "install -Dm644 PopSearch-0.1/data/PopSearch.desktop /app/share/applications/org.rajnisht7.PopSearch.desktop",
+                "install -Dm644 PopSearch-0.1/data/org.rajnisht7.PopSearch.png /app/share/icons/hicolor/256x256/apps/org.rajnisht7.PopSearch.png"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/rajnisht7/PopSearch/archive/refs/tags/v0.1.tar.gz",
+                    "sha256": "0fada17be11e4371893c1fbfec3008ba13e07406b00fd25d5de7b18bec24a1d6"
+                }
+            ]
+        },
+        {
+            "name": "python-dependencies",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app requests"
+            ]
+        }
+    ]
+}
+
