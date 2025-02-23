@@ -1,3 +1,3 @@
 #!/bin/sh
-python3 /app/search-bar.py
+python3 /app/bin/search-bar.py
 
