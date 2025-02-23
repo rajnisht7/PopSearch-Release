@@ -16,8 +16,8 @@
             "name": "PopSearch",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm755 src/search-bar.py /app/search-bar.py",
-                "install -Dm755 src/search_bar.sh /app/search_bar.sh",
+                "install -Dm755 src/search-bar.py /app/bin/search-bar.py",
+                "install -Dm755 src/search_bar.sh /app/bin/search_bar.sh",
                 "install -Dm644 src/data/PopSearch.desktop /app/share/applications/io.github.PopSearch.desktop",
                 "install -Dm644 src/data/io.github.PopSearch.png /app/share/icons/hicolor/256x256/apps/io.github.PopSearch.png"
             ],
