@@ -2,7 +2,7 @@
 Type=Application
 Name=Pop Search
 Exec=search_bar.sh
-Icon=org.rajnisht7.PopSearch
+Icon=io.github.PopSearch
 Terminal=false
 Categories=Utility;
 
