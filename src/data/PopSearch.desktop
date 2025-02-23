@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Pop Search
-Exec=/app/bin/search_bar.sh
+Exec=search_bar.sh
 Icon=io.github.PopSearch
 Terminal=false
 Categories=Utility;
